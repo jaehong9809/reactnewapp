@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 function Movie({ id, medium_cover_image, title, summary, genres }) {
   return (
-    <div>
+    <div style={{border:"10px solid #00FFFF", borderRadius:"30px", margin:"30px"}}>
       <img src={medium_cover_image} alt={title}></img>
       <h2>
         <Link to={`/movie/${id}`}>{title}</Link>
@@ -10,7 +10,7 @@ function Movie({ id, medium_cover_image, title, summary, genres }) {
       <p>{summary}</p>
       <ul>
         {genres.map((genre, index) => (
-          <li key={index}>{genre}</li>
+          <li key={index} >{genre}</li>
         ))}
       </ul>
     </div>

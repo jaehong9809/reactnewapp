@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Movie from "C:/Users/Good/Documents/practicemovie/src/components/Movie.js";
-
 function Home(){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
@@ -18,11 +17,11 @@ function Home(){
     }, []);
 
     return (
-      <div>
+      <div style={{justifyContent:"center"}}>
         {loading ? (
           <h1>Loading...</h1>
         ) : 
-          <div >
+          <div style={{width:"33%", padding:"10px", textAlign:"center"}}>
             {movies.map((item) => 
               
               <Movie id={item.id} medium_cover_image={item.medium_cover_image} title={item.title} summary={item.summary} genres={item.genres}/>
